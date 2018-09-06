@@ -6,6 +6,7 @@
 
 #initialize data frame of heteroplasmic sites
 output<-data.frame(matrix(nrow=0,ncol=3))
+options(stringsAsFactors=F) #rbind command later in the script will not work otherwise
 
 for (line in seq(1,nrow(mtcalls))){
 #remove reads with base quality < 20
